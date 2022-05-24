@@ -6,7 +6,13 @@ import movie5 from "../_assets/movie5.jpg";
 import movie6 from "../_assets/movie6.jpg";
 import movie7 from "../_assets/movie7.jpg";
 
-const mockData = [
+export interface mockMovie {
+  title: string;
+  movie: string;
+  score?: number | string;
+}
+
+const mockData: mockMovie[] = [
   {
     title: "Detective Conan",
     movie: movie1,
