@@ -7,17 +7,14 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 import mockData, { mockMovie } from "../_data/mock";
+import Poster from "./Poster";
+
+import "./Carousel.css";
 
 interface CarouselData {
   title?: string;
   data?: mockMovie[];
 }
-
-const Poster = ({ movie, title, score }: mockMovie, index: number) => (
-  <article key={index}>
-    <img src={movie} alt={title} />
-  </article>
-);
 
 const Carousel = ({
   title = "Filmes em Destaque",
@@ -57,7 +54,7 @@ const Carousel = ({
     nextArrow: <SlickArrow direction={Direction.right} />,
   };
   return (
-    <section>
+    <section className="carousel">
       <h2 className="relative z-10 font-bold text-2xl ml-8 mb-4">{title}</h2>
       <Slick className="relative mb-8 " {...options}>
         {data.map((movie, index) => Poster(movie, index))}
