@@ -36,7 +36,7 @@ const App = () => {
     <div className="m-auto antialised font-sans bg-black text-white">
       <Hero {...movies?.results[0]} />
       <NavBar />
-      <Carousel />
+      <Carousel data={movies?.results} />
       <Carousel />
       <Carousel />
     </div>
