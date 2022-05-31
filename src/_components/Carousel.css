@@ -1,3 +1,3 @@
 .slick-list {
-  overflow: unset;
+  overflow: unset !important;
 }

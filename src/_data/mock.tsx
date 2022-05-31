@@ -7,80 +7,82 @@ import movie6 from "../_assets/movie6.jpg";
 import movie7 from "../_assets/movie7.jpg";
 
 export interface mockMovie {
-  title: string;
-  poster_path: string;
+  title?: string;
+  name?: string;
+  cover?: string;
+  poster_path?: string;
   vote_average?: number | string;
 }
 
 const mockData: mockMovie[] = [
   {
     title: "Detective Conan",
-    poster_path: movie1,
+    cover: movie1,
   },
 
   {
     title: "Homem-Formiga x Vespa",
-    poster_path: movie2,
+    cover: movie2,
   },
 
   {
     title: "Avengers: Endgame",
-    poster_path: movie3,
+    cover: movie3,
   },
 
   {
     title: "Missão Impossível",
-    poster_path: movie4,
+    cover: movie4,
   },
 
   {
     title: "Mega Tubarão",
-    poster_path: movie5,
+    cover: movie5,
   },
 
   {
     title: "Deadpool 2",
-    poster_path: movie6,
+    cover: movie6,
   },
 
   {
     title: "Arranha-Céu",
-    poster_path: movie7,
+    cover: movie7,
   },
 
   {
     title: "Detective Conan",
-    poster_path: movie1,
+    cover: movie1,
   },
 
   {
     title: "Homem-Formiga x Vespa",
-    poster_path: movie2,
+    cover: movie2,
   },
 
   {
     title: "Avengers: Endgame",
-    poster_path: movie3,
+    cover: movie3,
   },
 
   {
     title: "Missão Impossível",
-    poster_path: movie4,
+    cover: movie4,
   },
 
   {
     title: "Mega Tubarão",
-    poster_path: movie5,
+    cover: movie5,
   },
 
   {
     title: "Deadpool 2",
-    poster_path: movie6,
+    cover: movie6,
   },
 
   {
     title: "Arranha-Céu",
-    poster_path: movie7,
+    cover: movie7,
   },
 ];
 

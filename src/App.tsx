@@ -13,32 +13,45 @@ const App = () => {
   const { URL, APISTRING } = CONST;
 
   const [movies, setMovies] = useState();
+  const [series, setSeries] = useState();
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch(
+      const movies = await fetch(
         `${URL}/discover/movie${APISTRING}&sort_by=popularity.desc`
       );
+      const moviesData = await movies.json();
+      setMovies(moviesData);
 
-      const data = await response.json();
-
-      setMovies(data);
-
-      console.log(movies);
+      const series = await fetch(
+        `${URL}/discover/tv${APISTRING}&sort_by=popularity.desc`
+      );
+      const seriesData = await series.json();
+      setSeries(seriesData);
     };
 
     fetchData();
   }, []);
 
-  useEffect(() => movies && console.log(movies), [movies]);
+  //useEffect(() => movies && console.log(movies), [movies]);
+
+  const getFeaturedMovie = () => movies && movies?.results[0];
+
+  const getMovieList = () => {
+    if (movies) {
+      const [featured, ...movieList] = movies?.results;
+      return movieList;
+    }
+    return [];
+  };
 
   return (
     <div className="m-auto antialised font-sans bg-black text-white">
-      <Hero {...movies?.results[0]} />
+      <Hero {...getFeaturedMovie()} />
       <NavBar />
-      <Carousel data={movies?.results} />
-      <Carousel />
-      <Carousel />
+      <Carousel title="Filmes populares" data={getMovieList()} />
+      <Carousel title="Séries populares" data={series?.results} />
+      <Carousel title="Placeholder" />
     </div>
   );
 };
