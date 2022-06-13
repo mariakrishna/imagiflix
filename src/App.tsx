@@ -5,6 +5,7 @@ import CONST from "./_data/constants";
 import Hero from "./_components/Hero";
 import NavBar from "./_components/NavBar";
 import Carousel from "./_components/Carousel";
+import Footer from "./_components/Footer";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -52,6 +53,7 @@ const App = () => {
       <Carousel title="Filmes populares" data={getMovieList()} />
       <Carousel title="Séries populares" data={series?.results} />
       <Carousel title="Placeholder" />
+      <Footer />
     </div>
   );
 };
