@@ -1,5 +1,3 @@
-import React from "react";
-
 import CONST from "../_data/constants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay, faPlus } from "@fortawesome/free-solid-svg-icons";

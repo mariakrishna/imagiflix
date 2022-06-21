@@ -1,4 +1,3 @@
-import React from "react";
 import Slick from "react-slick";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
